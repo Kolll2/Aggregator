@@ -1,5 +1,9 @@
 package model;
 
+import vo.Vacancy;
+
+import java.util.List;
+
 public class Provider {
     Strategy strategy;
 
@@ -9,5 +13,10 @@ public class Provider {
 
     public void setStrategy(Strategy strategy) {
         this.strategy = strategy;
+    }
+
+    List<Vacancy> getJavaVacancies(String searchString){
+        // call strategy method
+        return null;
     }
 }

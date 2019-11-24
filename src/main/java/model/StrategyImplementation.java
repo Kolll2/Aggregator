@@ -1,4 +1,4 @@
 package model;
 
-public class StrategyImplementation {
+public class StrategyImplementation implements Strategy {
 }
