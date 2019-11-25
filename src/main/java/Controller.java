@@ -1,6 +1,10 @@
 import model.Provider;
+import vo.Vacancy;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Controller {
 
@@ -19,5 +23,14 @@ public class Controller {
         return "Controller{" +
                 "providers=" + Arrays.toString(providers) +
                 '}';
+    }
+
+    public void scan() {
+        List<Vacancy> vacancies = Arrays.stream(providers)
+                .map(provider -> provider.getJavaVacancies(""))
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
+
+        System.out.println(vacancies.size());
     }
 }
