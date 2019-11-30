@@ -1,37 +1,21 @@
 package aggr;
-import aggr.model.Provider;
-import aggr.vo.Vacancy;
+import aggr.model.Model;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Objects;
+
 
 public class Controller {
 
+    private Model model;
 
-    private Provider[] providers;
+    public Controller(Model model) {
+        if (Objects.isNull(model))
+            throw new IllegalArgumentException();
 
-    public Controller(Provider ... providers) {
-
-        if (providers.length == 0) throw new IllegalArgumentException();
-        this.providers = providers;
-
+        this.model = model;
     }
 
-    @Override
-    public String toString() {
-        return "Controller{" +
-                "providers=" + Arrays.toString(providers) +
-                '}';
-    }
-
-    public void scan() {
-        List<Vacancy> vacancies = Arrays.stream(providers)
-                .map(provider -> provider.getJavaVacancies("Киев"))
-                .flatMap(Collection::stream)
-                .collect(Collectors.toList());
-
-        System.out.println(vacancies.size());
+    public void onCitySelect(String cityName){
+        model.selectCity(cityName);
     }
 }
