@@ -27,7 +27,7 @@ public class Controller {
 
     public void scan() {
         List<Vacancy> vacancies = Arrays.stream(providers)
-                .map(provider -> provider.getJavaVacancies(""))
+                .map(provider -> provider.getJavaVacancies("Kiev"))
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
 
