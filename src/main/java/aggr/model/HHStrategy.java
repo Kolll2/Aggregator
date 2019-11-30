@@ -1,10 +1,10 @@
-package model;
+package aggr.model;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import vo.Vacancy;
+import aggr.vo.Vacancy;
 
 import java.io.IOException;
 import java.net.URLEncoder;

@@ -1,4 +1,4 @@
-package vo;
+package aggr.vo;
 
 public class Vacancy {
     String title;

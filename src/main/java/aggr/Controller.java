@@ -1,5 +1,6 @@
-import model.Provider;
-import vo.Vacancy;
+package aggr;
+import aggr.model.Provider;
+import aggr.vo.Vacancy;
 
 import java.util.Arrays;
 import java.util.Collection;

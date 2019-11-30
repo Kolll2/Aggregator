@@ -1,6 +1,6 @@
-package model;
+package aggr.model;
 
-import vo.Vacancy;
+import aggr.vo.Vacancy;
 
 import java.util.Collections;
 import java.util.List;

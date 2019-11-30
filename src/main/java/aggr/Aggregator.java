@@ -1,5 +1,6 @@
-import model.HHStrategy;
-import model.Provider;
+package aggr;
+import aggr.model.HHStrategy;
+import aggr.model.Provider;
 
 public class Aggregator {
 
