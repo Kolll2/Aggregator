@@ -14,7 +14,7 @@ import java.util.List;
 
 public class HtmlView implements View {
 
-    private final String filePath = "./src/" +
+    private final String filePath = "./src/main/java/" +
             this.getClass().getPackage().getName().replace('.', '/') +
             "/vacancies.html";
     Controller controller;
